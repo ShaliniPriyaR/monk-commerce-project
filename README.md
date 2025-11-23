@@ -11,7 +11,8 @@ This project includes:
 - Apply coupon  
 - List applicable coupons  
 - DTO-driven API responses  
-- Global exception handling  
+- Global exception handling
+- Postman Collection: /postman/monk-commerce.postman_collection.json
 
 ---
 

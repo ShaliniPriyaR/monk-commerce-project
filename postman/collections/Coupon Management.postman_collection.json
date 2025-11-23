@@ -1,0 +1,859 @@
+{
+  "info": {
+    "_postman_id": "fadbd8be-19dd-4255-bb24-f3e1bdbbe823",
+    "name": "Coupon Management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "27200506"
+  },
+  "item": [
+    {
+      "name": "cart-wise coupon",
+      "id": "8223e3c2-a57c-4758-89b4-db92fdc505c4",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"type\": \"CART_WISE\",\n  \"expiryDate\": \"2025-02-15\",\n  \"status\": \"ACTIVE\",\n  \"conditions\": \"{\\\"min_items\\\": 3}\",\n  \"details\": \"{\\\"threshold\\\": 200, \\\"discount\\\": 10}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/coupons",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "coupons"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "2af1875b-69a3-455f-96d7-5583f44ae30a",
+          "name": "cart-wise coupon",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"CART_WISE\",\n  \"expiryDate\": \"2025-02-15\",\n  \"status\": \"ACTIVE\",\n  \"conditions\": \"{\\\"min_items\\\": 3}\",\n  \"details\": \"{\\\"threshold\\\": 200, \\\"discount\\\": 10}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/coupons",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "coupons"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 23 Nov 2025 20:26:05 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 1,\n    \"type\": \"CART_WISE\",\n    \"status\": \"ACTIVE\",\n    \"expiryDate\": \"2025-02-15\",\n    \"details\": {\n        \"threshold\": 200,\n        \"discount\": 10\n    },\n    \"conditions\": {\n        \"min_items\": 3\n    },\n    \"applicableDiscount\": null,\n    \"totalPrice\": null,\n    \"finalPrice\": null,\n    \"updatedCart\": null\n}"
+        }
+      ]
+    },
+    {
+      "name": "product-wise coupon",
+      "id": "eac58662-6be0-45d4-9bda-b844797ca961",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"type\": \"PRODUCT_WISE\",\n  \"expiryDate\": \"2025-02-20\",\n  \"status\": \"ACTIVE\",\n  \"details\": \"{\\\"product_id\\\": 1, \\\"discount\\\": 20}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/coupons",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "coupons"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "670848b5-87f3-4039-96e5-f319cee10fe3",
+          "name": "product-wise coupon",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"PRODUCT_WISE\",\n  \"expiryDate\": \"2025-02-20\",\n  \"status\": \"ACTIVE\",\n  \"details\": \"{\\\"product_id\\\": 1, \\\"discount\\\": 20}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/coupons",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "coupons"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 23 Nov 2025 20:26:18 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 2,\n    \"type\": \"PRODUCT_WISE\",\n    \"status\": \"ACTIVE\",\n    \"expiryDate\": \"2025-02-20\",\n    \"details\": {\n        \"product_id\": 1,\n        \"discount\": 20\n    },\n    \"conditions\": null,\n    \"applicableDiscount\": null,\n    \"totalPrice\": null,\n    \"finalPrice\": null,\n    \"updatedCart\": null\n}"
+        }
+      ]
+    },
+    {
+      "name": "BXGY",
+      "id": "44b25324-7b39-452f-aa8f-29ebe5b8c237",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"type\": \"BXGY\",\n  \"expiryDate\": \"2025-03-01\",\n  \"status\": \"ACTIVE\",\n  \"details\": \"{\\\"buy_products\\\": [{\\\"product_id\\\": 1, \\\"quantity\\\": 3}], \\\"get_products\\\": [{\\\"product_id\\\": 3, \\\"quantity\\\": 1}]}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/coupons",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "coupons"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "204775e2-59b1-486e-9077-14fe0f6b6abe",
+          "name": "BXGY",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"BXGY\",\n  \"expiryDate\": \"2025-03-01\",\n  \"status\": \"ACTIVE\",\n  \"details\": \"{\\\"buy_products\\\": [{\\\"product_id\\\": 1, \\\"quantity\\\": 3}], \\\"get_products\\\": [{\\\"product_id\\\": 3, \\\"quantity\\\": 1}]}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/coupons",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "coupons"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 23 Nov 2025 20:26:28 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 3,\n    \"type\": \"BXGY\",\n    \"status\": \"ACTIVE\",\n    \"expiryDate\": \"2025-03-01\",\n    \"details\": {\n        \"buy_products\": [\n            {\n                \"product_id\": 1,\n                \"quantity\": 3\n            }\n        ],\n        \"get_products\": [\n            {\n                \"product_id\": 3,\n                \"quantity\": 1\n            }\n        ]\n    },\n    \"conditions\": null,\n    \"applicableDiscount\": null,\n    \"totalPrice\": null,\n    \"finalPrice\": null,\n    \"updatedCart\": null\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get all coupons",
+      "id": "cb650161-f390-4bb6-aae1-9e296c2df907",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/coupons",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "coupons"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "c1eff56b-09d3-455f-a29d-5c154fc836e8",
+          "name": "Get all coupons",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/coupons",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "coupons"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 23 Nov 2025 20:26:48 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 1,\n        \"type\": \"CART_WISE\",\n        \"status\": \"ACTIVE\",\n        \"expiryDate\": \"2025-02-15\",\n        \"details\": {\n            \"threshold\": 200,\n            \"discount\": 10\n        },\n        \"conditions\": {\n            \"min_items\": 3\n        },\n        \"applicableDiscount\": null,\n        \"totalPrice\": null,\n        \"finalPrice\": null,\n        \"updatedCart\": null\n    },\n    {\n        \"id\": 2,\n        \"type\": \"PRODUCT_WISE\",\n        \"status\": \"ACTIVE\",\n        \"expiryDate\": \"2025-02-20\",\n        \"details\": {\n            \"product_id\": 1,\n            \"discount\": 20\n        },\n        \"conditions\": null,\n        \"applicableDiscount\": null,\n        \"totalPrice\": null,\n        \"finalPrice\": null,\n        \"updatedCart\": null\n    },\n    {\n        \"id\": 3,\n        \"type\": \"BXGY\",\n        \"status\": \"ACTIVE\",\n        \"expiryDate\": \"2025-03-01\",\n        \"details\": {\n            \"buy_products\": [\n                {\n                    \"product_id\": 1,\n                    \"quantity\": 3\n                }\n            ],\n            \"get_products\": [\n                {\n                    \"product_id\": 3,\n                    \"quantity\": 1\n                }\n            ]\n        },\n        \"conditions\": null,\n        \"applicableDiscount\": null,\n        \"totalPrice\": null,\n        \"finalPrice\": null,\n        \"updatedCart\": null\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Coupon by id",
+      "id": "7be8fd80-43cc-410c-b685-9f0bf5c6aa15",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/coupons/1",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "coupons",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "e56ae6fb-45d6-4c07-93bd-41b85262d52c",
+          "name": "Coupon by id",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/coupons/1",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "coupons",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 23 Nov 2025 20:27:08 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 1,\n    \"type\": \"CART_WISE\",\n    \"status\": \"ACTIVE\",\n    \"expiryDate\": \"2025-02-15\",\n    \"details\": {\n        \"threshold\": 200,\n        \"discount\": 10\n    },\n    \"conditions\": {\n        \"min_items\": 3\n    },\n    \"applicableDiscount\": null,\n    \"totalPrice\": null,\n    \"finalPrice\": null,\n    \"updatedCart\": null\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Coupon",
+      "id": "f7acf60a-f752-4a05-b88f-7367c7fd324b",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"type\": \"CART_WISE\",\n  \"expiryDate\": \"2025-12-12\",\n  \"status\": \"ACTIVE\",\n  \"conditions\": \"{\\\"min_items\\\": 3}\",\n  \"details\": \"{\\\"threshold\\\": 200, \\\"discount\\\": 10}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/coupons/1",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "coupons",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "fc1d0eca-6e42-4236-b501-c111136ab6c5",
+          "name": "Update Coupon",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"CART_WISE\",\n  \"expiryDate\": \"2025-12-12\",\n  \"status\": \"ACTIVE\",\n  \"conditions\": \"{\\\"min_items\\\": 3}\",\n  \"details\": \"{\\\"threshold\\\": 200, \\\"discount\\\": 10}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/coupons/1",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "coupons",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 23 Nov 2025 20:28:04 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 1,\n    \"type\": \"CART_WISE\",\n    \"status\": \"ACTIVE\",\n    \"expiryDate\": \"2025-12-12\",\n    \"details\": {\n        \"threshold\": 200,\n        \"discount\": 10\n    },\n    \"conditions\": {\n        \"min_items\": 3\n    },\n    \"applicableDiscount\": null,\n    \"totalPrice\": null,\n    \"finalPrice\": null,\n    \"updatedCart\": null\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete coupon",
+      "id": "3d831d20-1cd4-46cc-910c-f0534217443c",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/coupons/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "coupons",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "9877fab9-dded-4e90-af2f-214503ba5c26",
+          "name": "Delete coupon",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/coupons/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "coupons",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "0"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 23 Nov 2025 19:51:59 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": ""
+        },
+        {
+          "id": "51152d11-8fce-451a-94a5-bd6255ecc601",
+          "name": "Invalid Delete coupon",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/coupons/34",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "coupons",
+                "34"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 23 Nov 2025 20:28:44 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"error\": \"Coupon with ID 34 not found\"\n}"
+        },
+        {
+          "id": "54034537-79a4-426a-a304-ae0c4e06ab26",
+          "name": "Used Delete coupon",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/coupons/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "coupons",
+                "1"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 23 Nov 2025 20:29:59 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"error\": \"Used coupons cannot be deleted\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Applicable Coupons",
+      "id": "4be2e041-71b1-4aec-88c6-7545dbe8fc27",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cart\": {\n    \"items\": [\n      { \"product_id\": 1, \"quantity\": 6, \"price\": 50 },\n      { \"product_id\": 2, \"quantity\": 3, \"price\": 30 },\n      { \"product_id\": 3, \"quantity\": 2, \"price\": 25 }\n    ]\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/applicable-coupons",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "applicable-coupons"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "92f76a74-709d-491d-bbca-a1be451e28d7",
+          "name": "Get Applicable Coupons",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"cart\": {\n    \"items\": [\n      { \"product_id\": 1, \"quantity\": 6, \"price\": 50 },\n      { \"product_id\": 2, \"quantity\": 3, \"price\": 30 },\n      { \"product_id\": 3, \"quantity\": 2, \"price\": 25 }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/applicable-coupons",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "applicable-coupons"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 23 Nov 2025 20:29:04 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 1,\n        \"type\": \"CART_WISE\",\n        \"status\": \"ACTIVE\",\n        \"expiryDate\": \"2025-12-12\",\n        \"details\": {\n            \"threshold\": 200,\n            \"discount\": 10\n        },\n        \"conditions\": {\n            \"min_items\": 3\n        },\n        \"applicableDiscount\": 44,\n        \"totalPrice\": null,\n        \"finalPrice\": null,\n        \"updatedCart\": null\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "apply coupon",
+      "id": "89d01a2b-d8dd-4c10-ac0f-fb3dade38aa8",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cart\": {\n    \"items\": [\n      { \"product_id\": 1, \"quantity\": 6, \"price\": 50 },\n      { \"product_id\": 2, \"quantity\": 3, \"price\": 30 },\n      { \"product_id\": 3, \"quantity\": 2, \"price\": 25 }\n    ]\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/apply-coupon/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "apply-coupon",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "56758f97-761d-40c1-8e1c-bd2e31f01c2d",
+          "name": "apply coupon",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"cart\": {\n    \"items\": [\n      { \"product_id\": 1, \"quantity\": 6, \"price\": 50 },\n      { \"product_id\": 2, \"quantity\": 3, \"price\": 30 },\n      { \"product_id\": 3, \"quantity\": 2, \"price\": 25 }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/apply-coupon/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "apply-coupon",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 23 Nov 2025 20:29:47 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 1,\n    \"type\": \"CART_WISE\",\n    \"status\": \"USED\",\n    \"expiryDate\": \"2025-12-12\",\n    \"details\": {\n        \"threshold\": 200,\n        \"discount\": 10\n    },\n    \"conditions\": {\n        \"min_items\": 3\n    },\n    \"applicableDiscount\": 44,\n    \"totalPrice\": 440,\n    \"finalPrice\": 396,\n    \"updatedCart\": {\n        \"items\": [\n            {\n                \"product_id\": 1,\n                \"quantity\": 6,\n                \"price\": 50\n            },\n            {\n                \"product_id\": 2,\n                \"quantity\": 3,\n                \"price\": 30\n            },\n            {\n                \"product_id\": 3,\n                \"quantity\": 2,\n                \"price\": 25\n            }\n        ]\n    }\n}"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "id": "3c89c75c-d30a-46e2-b83c-02b9f16e6de2",
+      "key": "baseURL",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}

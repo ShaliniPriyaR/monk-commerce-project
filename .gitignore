@@ -51,3 +51,8 @@ lombok.config
 *.pgsql
 *.db
 postgres-data/
+
+# ========================
+# Postman
+# ========================
+.postman/
