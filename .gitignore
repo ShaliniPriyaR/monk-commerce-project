@@ -1,0 +1,53 @@
+# ========================
+# Spring Boot & Maven
+# ========================
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+
+# Ignore Maven logs
+mvnw.cmd
+mvnw
+.log
+*.log*
+
+# Ignore JVM crash logs
+hs_err_pid*
+replay_pid*
+
+# Ignore Spring Boot devtools files
+.spring-boot-devtools.properties
+
+# ========================
+# OS-specific files
+# ========================
+Thumbs.db
+.DS_Store
+
+# ========================
+# Generated files
+# ========================
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# ========================
+# Test Reports
+# ========================
+surefire-reports/
+failsafe-reports/
+
+# ========================
+# Lombok
+# ========================
+lombok.config
+
+# ========================
+# Postgres local artifacts
+# ========================
+*.pgsql
+*.db
+postgres-data/
